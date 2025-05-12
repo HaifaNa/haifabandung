@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Kota Bandung</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-
+button.css">
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-
+fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+<link rel="stylesheet" href="https://balladaniel.github.io/leaflet-dataclassification/leaflet-
+dataclassification.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-
+20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-
+fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+charset="utf-8"></script>
+<script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-
+dataclassification.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <!-- Leaflet CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+ <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+ <link rel="stylesheet" href="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.css" />
+ 
+ <!-- Custom CSS -->
+ <link rel="stylesheet" href="css/style.css">
+ 
+ <!-- Leaflet JavaScript -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+ <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+ <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+ <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+ <script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.js"></script>
+ 
+ <!-- jQuery -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<body>
+     <!--Header Section-->
+     <header id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="asset/logobandung.png" alt="Logo" width="100">
+                <h1>WebGIS Kota Bandung</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#map-section">Map</a></li>
+                    <li><a href="#data-section">Data</a></li>
+                    <li><a href="#author-section">Author</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</style>
+</head>
+<body>
+<header id="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="asset/Kota Bandung.png" alt="Logo" width="100">
+            <h1>WebGIS Kota Bandung</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="#map-section">Map</a></li>
+                <li><a href="#data-section">Data</a></li>
+                <li><a href="#author-section">Author</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="hero-section" class="hero-section">
+    <div class="overlay"></div>
+    <video autoplay muted loop>
+        <source src="asset/yt1z.net - Alun Alun Bandung LetsFindBandung (720p).mp4">
+    </video>
+    <div class="intro">
+        <div class="title-container">
+            <h1>WebGIS Basis Data Spasial Kota Bandung</h1>
+            <p>Halaman untuk Melakukan Eksplorasi Basis Data Spasial di Kota Bandung</p>
+        </div>
+    </div>
+</div>
+<div id="map-section">
+    <h2>Jelajahi WebGIS Basis Data Spasial Kota Bandung</h2>
+    <div id="map">
+    <!-- akan muncul peta disini -->
+    </div>
+</div>
+<div id="data-section">
+    <h2>Data Tersedia</h2>
+    <div class="container">
+        <div class="column">
+            <div class="data-item">
+                <div class="data-icon">
+                    <img src="asset/geografis.jpg" alt="Lokasi Geografi">
+                </div>
+                <div class="description">
+                    <h3>Lokasi Geografi</h3>
+                    <p>Bandung adalah kota yang terletak di Provinsi Jawa Barat, Indonesia, pada koordinat sekitar 6°55′ LS dan 107°36′ BT.  
+                        Kota ini berada di dataran tinggi dengan ketinggian sekitar 768 meter di atas permukaan laut dan dikelilingi oleh pegunungan, sehingga memiliki iklim sejuk. </p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="data-item">
+                <div class="data-icon">
+                    <img src="asset/kependudukan.jpg" alt="Kependudukan">
+                </div>
+                <div class="description">
+                    <h3>Kependudukan</h3>
+                    <p>Memiliki jumlah penduduk sekitar 2,5 juta jiwa (data terbaru bisa sedikit berubah), menjadikannya salah satu kota terpadat di Indonesia. 
+                        Mayoritas penduduknya berasal dari suku Sunda, dengan Bahasa Sunda dan Bahasa Indonesia sebagai bahasa utama.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="data-item">
+                <div class="data-icon">
+                    <img src="asset/kesehatan.jpg" alt="Kesehatan">
+                </div>
+                <div class="description">
+                    <h3>Kesehatan</h3>
+                    <p>Kesehatan di Kota Bandung didukung oleh banyak rumah sakit, puskesmas, dan klinik. 
+                        Pemerintah aktif dalam program imunisasi, penanggulangan stunting, dan layanan kesehatan gratis bagi masyarakat berpenghasilan rendah.
+                        Namun, tantangan masih ada seperti kepadatan penduduk dan polusi udara.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="data-item">
+                <div class="data-icon">
+                    <img src="asset/budaya.jpg" alt="Kebudayaan">
+                </div>
+                <div class="description">
+                    <h3>Kebudayaan</h3>
+                    <p>Kebudayaan Kota Bandung mencerminkan perpaduan tradisi Sunda dan kreativitas modern, 
+                        terlihat dari seni, musik, kuliner, dan gaya hidup masyarakatnya.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="data-item">
+                <div class="data-icon">
+                    <img src="asset/pendidikan.png" alt="Pendidikan">
+                </div>
+                <div class="description">
+                    <h3>Fasilitas Pendidikan</h3>
+                    <p>Kota Bandung memiliki fasilitas pendidikan yang lengkap, mulai dari taman kanak-kanak hingga perguruan tinggi ternama seperti ITB, UNPAD, dan UPI. 
+                        Kota ini juga dikenal sebagai pusat pendidikan dan riset di Indonesia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="data-item">
+                <div class="data-icon">
+                    <img src="asset/wisata.jpg" alt="Wisata">
+                </div>
+                <div class="description">
+                    <h3>Objek Wisata</h3>
+                    <p>Bandung memiliki beragam objek wisata, seperti Kawah Putih dan Tangkuban Perahu untuk wisata alam, serta kawasan Lembang dan Dago yang sejuk. 
+                        Ada juga wisata belanja di Jalan Riau dan kuliner di Braga.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="author-section">
+    <div class="author-content">
+        <h2>Tentang Pembuat</h2>
+        <img src="asset/haifa.jpg" alt="Profile Picture" class="profile-picture">
+        <div class="author-name">
+            <h3>Haifa Nabilah</h3>
+        </div>
+        <p>Mahasiswa yang saat ini menempuh pendidikan di Universitas Pendidikan Indonesia,
+         dengan mengambil jurusan Sains Informasi Geografi. 
+         Website ini dibuat untuk mengenalkan salah satu pembelajaran di Sains Informasi Geografi mengenai web berbasis GIS.</p>
+        </p>
+    </div>
+</div>
+<div id="footer">
+    <div class="footer-content">
+    <h3>Hubungi Saya</h3>
+    <p>Email: haifanabilah1004@upi.edu</p>
+    <p>Phone: +6282119350241</p>
+    </div>
+    </div>
+
+    <!--Menghubungkan dengan Script Js-->
+<script src="js/script.js"></script>
+</body>
+</html>
